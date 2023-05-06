@@ -14,7 +14,8 @@ exports.getAll = (Model) =>
       .limitFields()
       .paginate();
 
-    const doc = await features.query.explain();
+    const doc = await features.query;
+    // const doc = await features.query.explain();
 
     const modelName = Model.modelName.toLowerCase();
 
