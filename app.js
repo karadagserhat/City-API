@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -45,6 +46,8 @@ app.use(
     whitelist: ['cityPlate'],
   })
 );
+
+app.use(compression());
 
 // 2) ROUTES
 app.use('/api/v1/cities', cityRouter);
