@@ -34,7 +34,6 @@ const citySchema = new mongoose.Schema(
 );
 
 citySchema.index({ cityPlate: 1 });
-citySchema.index({ slug: 1 });
 
 // Virtual Populate
 citySchema.virtual('locations', {

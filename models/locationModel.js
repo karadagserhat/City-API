@@ -31,22 +31,22 @@ const locationSchema = new mongoose.Schema({
 
 // locationSchema.index({ city: 1, user: 1 }, { unique: true });
 
-locationSchema.pre(/^find/, function (next) {
-  // this.populate({
-  //   path: 'city',
-  //   select: 'name',
-  // }).populate({
-  //   path: 'user',
-  //   select: 'name photo',
-  // });
+// locationSchema.pre(/^find/, function (next) {
+//   this.populate({
+//     path: 'city',
+//     select: 'name',
+//   }).populate({
+//     path: 'user',
+//     select: 'name photo',
+//   });
 
-  this.populate({
-    path: 'user',
-    select: 'name photo',
-  });
+//   this.populate({
+//     path: 'user',
+//     select: 'name photo',
+//   });
 
-  next();
-});
+//   next();
+// });
 
 const Location = mongoose.model('Location', locationSchema);
 
