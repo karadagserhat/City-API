@@ -13,38 +13,23 @@ const citySchema = new mongoose.Schema(
       minlength: [2, 'A city name must have more or equal than 2 characters!'],
     },
     cityPlate: Number,
-    slug: String,
     createdAt: {
       type: Date,
       default: Date.now(),
       select: false,
     },
-    // locations: [
+    // user: [
     //   {
-    //     type: {
-    //       type: String,
-    //       default: 'Point',
-    //       enum: ['Point'],
-    //     },
-    //     coordinates: [Number],
-    //     cityName: String,
-    //     locName: String,
-    //     address: String,
-    //     details_url: String,
-    //     images: [String],
-    //     cityDescription: String,
+    //     type: mongoose.Schema.ObjectId,
+    //     ref: 'User',
     //   },
     // ],
-    user: [
-      {
-        type: mongoose.Schema.ObjectId,
-        ref: 'User',
-      },
-    ],
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
+    id: false,
+    versionKey: false,
   }
 );
 
@@ -58,14 +43,14 @@ citySchema.virtual('locations', {
   localField: '_id',
 });
 
-citySchema.pre(/^find/, function (next) {
-  this.populate({
-    path: 'user',
-    select: '-__v',
-  });
+// citySchema.pre(/^find/, function (next) {
+//   this.populate({
+//     path: 'user',
+//     select: '-__v',
+//   });
 
-  next();
-});
+//   next();
+// });
 
 const City = mongoose.model('City', citySchema);
 
