@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const locationSchema = new mongoose.Schema({
+const tourSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: ['true', "Location can't be empty!"],
+    required: ['true', "tour can't be empty!"],
   },
   type: {
     type: String,
@@ -20,18 +20,18 @@ const locationSchema = new mongoose.Schema({
   city: {
     type: mongoose.Schema.ObjectId,
     ref: 'City',
-    required: [true, 'Location must belong to a city'],
+    required: [true, 'tour must belong to a city'],
   },
   user: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
-    required: [true, 'Location must belong to a user'],
+    required: [true, 'tour must belong to a user'],
   },
 });
 
-// locationSchema.index({ city: 1, user: 1 }, { unique: true });
+// tourSchema.index({ city: 1, user: 1 }, { unique: true });
 
-// locationSchema.pre(/^find/, function (next) {
+// tourSchema.pre(/^find/, function (next) {
 //   this.populate({
 //     path: 'city',
 //     select: 'name',
@@ -48,6 +48,6 @@ const locationSchema = new mongoose.Schema({
 //   next();
 // });
 
-const Location = mongoose.model('Location', locationSchema);
+const tour = mongoose.model('tour', tourSchema);
 
-module.exports = Location;
+module.exports = tour;

@@ -4,7 +4,7 @@ const AppError = require('../utils/appError');
 
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {
-    // To allow for nested GET locations on city
+    // To allow for nested GET tours on city
     let filter = {};
     if (req.params.cityId) filter = { city: req.params.cityId };
 
@@ -31,7 +31,7 @@ exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id).select('-__v');
     if (popOptions) query = query.populate(popOptions);
-    // if(popOptions) query = query.populate('locations');
+    // if(popOptions) query = query.populate('tours');
 
     const doc = await query;
 

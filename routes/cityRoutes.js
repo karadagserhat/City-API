@@ -1,14 +1,14 @@
 const express = require('express');
 const cityController = require('../controllers/cityController');
 const authController = require('../controllers/authController');
-const locationRouter = require('./locationRoutes');
+const tourRouter = require('./tourRoutes');
 
 const router = express.Router();
 
-// POST /city/45454/locations
-// GET /city/45454/locations
-// GET /city/45454/locations/8675753
-router.use('/:cityId/locations', locationRouter);
+// POST /city/45454/tours
+// GET /city/45454/tours
+// GET /city/45454/tours/8675753
+router.use('/:cityId/tours', tourRouter);
 
 router
   .route('/')

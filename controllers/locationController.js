@@ -1,6 +1,6 @@
 const multer = require('multer');
 const sharp = require('sharp');
-const Location = require('../models/locationModel');
+const tour = require('../models/tourModel');
 const factory = require('./handlerFactory');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
@@ -32,14 +32,14 @@ exports.resizeLocImages = catchAsync(async (req, res, next) => {
 
   await Promise.all(
     req.files.map(async (file) => {
-      const filename = `location-${req.params.id}-${Date.now()}.jpeg`;
+      const filename = `tour-${req.params.id}-${Date.now()}.jpeg`;
 
       // await sharp(req.files[0].buffer)
       await sharp(file.buffer)
         .resize(2000, 1333)
         .toFormat('jpeg')
         .jpeg({ quality: 90 })
-        .toFile(`public/img/locations/${filename}`);
+        .toFile(`public/img/tours/${filename}`);
 
       req.body.images.push(filename);
     })
@@ -56,8 +56,8 @@ exports.setCityUserIds = (req, res, next) => {
   next();
 };
 
-exports.getAllLocations = factory.getAll(Location);
-exports.getLocation = factory.getOne(Location);
-exports.createLocation = factory.createOne(Location);
-exports.deleteLocation = factory.deleteOne(Location);
-exports.updateLocation = factory.updateOne(Location);
+exports.getAlltours = factory.getAll(tour);
+exports.gettour = factory.getOne(tour);
+exports.createtour = factory.createOne(tour);
+exports.deletetour = factory.deleteOne(tour);
+exports.updatetour = factory.updateOne(tour);

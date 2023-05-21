@@ -36,8 +36,8 @@ const citySchema = new mongoose.Schema(
 citySchema.index({ cityPlate: 1 });
 
 // Virtual Populate
-citySchema.virtual('locations', {
-  ref: 'Location',
+citySchema.virtual('tours', {
+  ref: 'tour',
   foreignField: 'city',
   localField: '_id',
 });

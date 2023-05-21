@@ -1,7 +1,7 @@
 {
   "name": "tour-api",
   "version": "1.0.0",
-  "description": "city api for city-location-app",
+  "description": "city api for city-tour-app",
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
