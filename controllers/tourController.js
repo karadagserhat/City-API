@@ -1,6 +1,6 @@
 const multer = require('multer');
 const sharp = require('sharp');
-const tour = require('../models/tourModel');
+const Tour = require('../models/tourModel');
 const factory = require('./handlerFactory');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
@@ -56,8 +56,8 @@ exports.setCityUserIds = (req, res, next) => {
   next();
 };
 
-exports.getAlltours = factory.getAll(tour);
-exports.gettour = factory.getOne(tour);
-exports.createtour = factory.createOne(tour);
-exports.deletetour = factory.deleteOne(tour);
-exports.updatetour = factory.updateOne(tour);
+exports.getAllTours = factory.getAll(Tour);
+exports.getTour = factory.getOne(Tour);
+exports.createTour = factory.createOne(Tour);
+exports.deleteTour = factory.deleteOne(Tour);
+exports.updateTour = factory.updateOne(Tour);

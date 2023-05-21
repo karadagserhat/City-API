@@ -12,28 +12,28 @@ const router = express.Router({ mergeParams: true });
 // POST /tours
 router
   .route('/')
-  .get(tourController.getAlltours)
+  .get(tourController.getAllTours)
   .post(
     authController.protect,
     authController.restrictTo('user'),
     tourController.setCityUserIds,
-    tourController.createtour
+    tourController.createTour
   );
 
 router
   .route('/:id')
-  .get(tourController.gettour)
+  .get(tourController.getTour)
   .patch(
     authController.protect,
     authController.restrictTo('user', 'admin'),
     tourController.uploadLocImages,
     tourController.resizeLocImages,
-    tourController.updatetour
+    tourController.updateTour
   )
   .delete(
     authController.protect,
     authController.restrictTo('user', 'admin'),
-    tourController.deletetour
+    tourController.deleteTour
   );
 
 module.exports = router;
