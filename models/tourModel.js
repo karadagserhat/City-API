@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const tourSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "tour can't be empty!"],
+    required: [true, 'A tour must have a name'],
   },
   type: {
     type: String,
