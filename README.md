@@ -1,5 +1,5 @@
 
-# City API Documentation
+# City API documentation
 
 These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netlify.app/) 
 
@@ -10,13 +10,13 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
     - [SignUp](#21-signup)
     - [Login](#22-login)
 - [Resources](#3-resources)
-  - [Users](#31-users)
+    - [Users](#31-users) 
   - [Cities](#32-cities)
-  - [Tours](#33-tours)
+  - [Tours](#33-tours) ( [Get All Tours](#331-getAllTours) ) [Get Tour](#332-getTour)
 
 ## 1. Overview
 
-City’s API is a REST API. All requests are made to endpoints beginning:    
+City’s API is a REST API. All requests are made to endpoints beginning:
 `https://city-api-production.up.railway.app/api/v1/`
 
 All requests must be secure, i.e. `https`, not `http`.
@@ -245,7 +245,7 @@ Possible errors:
 
 ### 3.3. Tours
 
-#### Get All Tours
+#### 3.3.1. Get All Tours
 
 Returns a full list of tours. An example request looks like this:
 
@@ -297,7 +297,7 @@ Where a Tour object is:
 | city | string | The id of city in tour.           |
 | user | string | The id of user in tour.          |
 
-#### Get Tour
+#### 3.3.2. Get Tour
 This endpoint returns a specific tour. An example request looks like this:
 
 ```
@@ -332,9 +332,9 @@ Possible errors:
 
 | Error code           | Description                                                                           |
 | ---------------------|---------------------------------------------------------------------------------------|
-| 400 Bad Request     | `TourID` is invalid|
+| 400 Bad Request     | `TourID` is invalid.|
 
-#### Create Tour
+#### 3.3.3. Create Tour
 You should grant permission to the application for create a new tour.
 
 ```
@@ -377,4 +377,56 @@ Possible errors:
 | Error code           | Description         |
 | ---------------------|-------------------------|
 | 400 Bad Request      | Required fields were invalid, not specified.   |
+
+#### 3.3.4. Udpate Tour
+You should grant permission to the application for update a tour.
+
+```
+PATCH https://city-api-production.up.railway.app/api/v1/tours/{{tourID}}
+```
+
+Example request header:
+
+```
+Authorization: Bearer 181d415f34379af07b2c11d144dfbe35d
+```
+
+Example request body:
+
+```json
+{
+    "name": "Eyüp Sultan Camii",
+    "coordinates": ["35.32", "36.98"]
+}
+```
+
+Possible errors:
+
+| Error code           | Description         |
+| ---------------------|-------------------------|
+| 400 Bad Request      | `TourID` is invalid.  |
+
+#### 3.3.5. Delete Tour
+You should grant permission to the application for delete a tour.
+
+```
+DELETE https://city-api-production.up.railway.app/api/v1/tours/{{tourID}}
+```
+
+Example request header:
+
+```
+Authorization: Bearer 181d415f34379af07b2c11d144dfbe35d
+```
+
+Returns no content. (204)
+
+
+Possible errors:
+
+| Error code           | Description         |
+| ---------------------|-------------------------|
+| 400 Bad Request      | `TourID` is invalid.  |
+
+
 
