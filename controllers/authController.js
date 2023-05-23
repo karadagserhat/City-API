@@ -46,6 +46,9 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordChangedAt: req.body.passwordChangedAt,
   });
 
+  newUser.active = undefined;
+  newUser.role = undefined;
+
   createSendToken(newUser, 201, req, res);
 });
 
