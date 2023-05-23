@@ -1,22 +1,20 @@
 
-# City API documentation
+# City API Documentation
 
 These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netlify.app/) 
 
 #### Contents
 
 - [Overview](#1-overview)
-- [Authentication](#2-authentication)
-    - [SignUp](#21-signup)
-    - [Login](#22-login)
+- [Authentication](#2-authentication)  ( [SignUp](#21-signup) / [Login](#22-login) )
 - [Resources](#3-resources)
-    - [Users](#31-users) 
-  - [Cities](#32-cities)
-  - [Tours](#33-tours) ( [Get All Tours](#331-get-all-tours) ) ( [Get Tour](#332-get-tour) )
+    - [Users](#31-users)  ( [Get Current User](#311-get-current-user) )
+  - [Cities](#32-cities) ( [Get All Cities](#321-get-all-cities) / [Get City](#322-get-city) )
+  - [Tours](#33-tours) ( [Get All Tours](#331-get-all-tours) /  [Get Tour](#332-get-tour) / [Create Tour](#333-create-tour) / [Update Tour](#334-get-tour) / [Delete Tour](#335-get-tour) )
 
 ## 1. Overview
 
-City’s API is a REST API. All requests are made to endpoints beginning:
+City’s API is a REST API. All requests are made to endpoints beginning:  
 `https://city-api-production.up.railway.app/api/v1/`
 
 All requests must be secure, i.e. `https`, not `http`.
@@ -142,7 +140,7 @@ The API is RESTful and arranged around resources.  All requests must be made usi
 
 ### 3.1. Users
 
-#### Getting the authenticated user’s details
+#### 3.1.1. Get Current User
 Returns details of the user who has granted permission to the application.
 
 ```
@@ -179,7 +177,7 @@ Possible errors:
 
 ### 3.2. Cities
 
-#### Get All Cities
+#### 3.2.1. Get All Cities
 
 Returns a full list of cities. An example request looks like this:
 
@@ -215,7 +213,7 @@ Where a City object is:
 | name        | string | The name of city    |
 | cityPlate | string | The plate of city    |
 
-#### Get City
+#### 3.2.2. Get City
 
 This endpoint returns a specific city. An example request looks like this:
 
@@ -427,6 +425,5 @@ Possible errors:
 | Error code           | Description         |
 | ---------------------|-------------------------|
 | 400 Bad Request      | `TourID` is invalid.  |
-
 
 
