@@ -1,5 +1,5 @@
 
-# City API documentation
+# City API Documentation
 
 These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netlify.app/) 
 
@@ -25,7 +25,7 @@ All requests must be secure, i.e. `https`, not `http`.
 
 In order to some transaction (create, delete, update) , you will need an access token. You can acquire an access token in one way -> **token based authentication**.
 
-### 2.1 Sign Up User
+### 2.1. Sign Up 
 For the protected routes, firstly you should sign up.
 
 ```
@@ -89,7 +89,7 @@ Possible errors:
 | 400 Bad Request | Duplicate fields or invalid input data |
 
 
-### 2.2 Login User
+### 2.2. Login 
 
 ```
 POST https://city-api-production.up.railway.app/api/v1/users/login
