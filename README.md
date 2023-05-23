@@ -7,7 +7,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 
 - [Overview](#1-overview)
 - [Authentication](#2-authentication)
-    - [Sign Up](#21-signup)
+    - [SignUp](#21-signup)
     - [Login](#22-login)
 - [Resources](#3-resources)
   - [Users](#31-users)
@@ -25,7 +25,7 @@ All requests must be secure, i.e. `https`, not `http`.
 
 In order to some transaction (create, delete, update) , you will need an access token. You can acquire an access token in one way -> **token based authentication**.
 
-### 2.1. Sign Up 
+### 2.1. SignUp 
 For the protected routes, firstly you should sign up.
 
 ```
