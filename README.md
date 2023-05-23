@@ -12,7 +12,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 - [Resources](#3-resources)
     - [Users](#31-users) 
   - [Cities](#32-cities)
-  - [Tours](#33-tours) ( [Get All Tours](#331-getAllTours) ) [Get Tour](#332-getTour)
+  - [Tours](#33-tours) ( [Get All Tours](#331-get-all-tours) ) ( [Get Tour](#332-get-tour) )
 
 ## 1. Overview
 
