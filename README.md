@@ -10,7 +10,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 - [Resources](#3-resources)
     - [Users](#31-users)  ( [Get Current User](#311-get-current-user) )
   - [Cities](#32-cities) ( [Get All Cities](#321-get-all-cities) / [Get City](#322-get-city) )
-  - [Tours](#33-tours) ( [Get All Tours](#331-get-all-tours) /  [Get Tour](#332-get-tour) / [Create Tour](#333-create-tour) / [Update Tour](#334-get-tour) / [Delete Tour](#335-get-tour) )
+  - [Tours](#33-tours) ( [Get All Tours](#331-get-all-tours) /  [Get Tour](#332-get-tour) / [Create Tour](#333-create-tour) / [Update Tour](#334-update-tour) / [Delete Tour](#335-delete-tour) )
 
 ## 1. Overview
 
@@ -46,7 +46,7 @@ With the following fields:
 | --- |--------|------------|------------|
 | name  | string    | required   | The name of the user.   |
 | email   | string | required   | The email of the user. Email should be unique. |
-| password    | string   | required   | The password of the user.   |
+| password    | string   | required   | The password of the user. At least 6 characters.  |
 |passwordConfirm |string |required |The password of the user.Password and passwordConfirm should be same.|
 
 
@@ -71,7 +71,7 @@ Where a User object is:
 
 | Field     | Type         | Description       |
 | --------------|----------|--------------|
-| status  | string       | The access that your request.  |
+| status  | string       | The status of your request.  |
 | token     | string       | The user's token. This token has a validity of 90 days.  |
 |   _id    | string       | The userId of the user.    |
 | name   | string  | The user's name.       |
@@ -119,8 +119,8 @@ Example response:
     "data": {
         "user": {
             "_id": "646c2e1fb97c3435294f16ea",
-            "name": "w",
-            "email": "w@hotmail.com",
+            "name": "exampleName",
+            "email": "exampleEmail@email.com",
             "photo": "default.jpg"
         }
     }
