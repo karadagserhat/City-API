@@ -21,9 +21,9 @@ All requests must be secure, i.e. `https`, not `http`.
 
 ## 2. Authentication
 
-In order to some transaction (create, delete, update) , you will need an access token. You can acquire an access token in one way -> **token based authentication**.
+In order to some transaction (create, delete, update) you will need an access token. You can acquire an access token in one way -> **token based authentication**.
 
-### 2.1. SignUp 
+### 2.1. Sign Up 
 For the protected routes, firstly you should sign up.
 
 ```
@@ -35,8 +35,8 @@ The first step, you should send json body. Example body:
 {
     "name": "exampleName",
     "email": "exampleEmail@email.com",
-    "password": ******,
-    "passwordConfirm": ******
+    "password": {{password}},
+    "passwordConfirm": {{password}}
 }
 ```
 
@@ -73,7 +73,7 @@ Where a User object is:
 | --------------|----------|--------------|
 | status  | string       | The status of your request.  |
 | token     | string       | The user's token. This token has a validity of 90 days.  |
-|   _id    | string       | The userId of the user.    |
+|   _id    | string       | The id of the user.    |
 | name   | string  | The user's name.       |
 | email    | string       | The user's email.      |
 | photo  | string       | The user's photo.   |
@@ -84,7 +84,7 @@ Possible errors:
 
 | Error code  | Description |
 | ------|-------|
-| 400 Bad Request | Duplicate fields or invalid input data |
+| 400 Bad Request | Duplicate fields or invalid input data. |
 
 
 ### 2.2. Login 
@@ -185,7 +185,7 @@ Returns a full list of cities. An example request looks like this:
 GET https://city-api-production.up.railway.app/api/v1/cities
 ```
 
-The response is a list of cities objects. The response array is wrapped in a data envelope. This endpoint will return all cities in Turkey. Example response:
+This endpoint will return all cities in Turkey. The response array is wrapped in a data envelope. Example response:
 
 ```json 
 {
@@ -251,7 +251,7 @@ Returns a full list of tours. An example request looks like this:
 GET https://city-api-production.up.railway.app/api/v1/tours
 ```
 
-The response is a list of tours objects. The response array is wrapped in a data envelope. This endpoint will return all tours in Turkey. Example response:
+This endpoint will return all tours in Turkey. The response array is wrapped in a data envelope. Example response:
 
 ```json
 {
