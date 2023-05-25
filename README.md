@@ -376,7 +376,7 @@ Possible errors:
 | ---------------------|-------------------------|
 | 400 Bad Request      | Required fields were invalid, not specified.   |
 
-#### 3.3.4. Udpate Tour
+#### 3.3.4. Update Tour
 You should grant permission to the application for update a tour.
 
 ```
