@@ -6,7 +6,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 #### Contents
 
 - [Overview](#1-overview)
-- [Authentication](#2-authentication)  ( [Sign Up](#21-signup) / [Login](#22-login) )
+- [Authentication](#2-authentication)  ( [Sign Up](#21-sign-up) / [Login](#22-login) )
 - [Resources](#3-resources)
     - [Users](#31-users)  ( [Get Current User](#311-get-current-user) )
   - [Cities](#32-cities) ( [Get All Cities](#321-get-all-cities) / [Get City](#322-get-city) )
