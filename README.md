@@ -15,7 +15,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 ## 1. Overview
 
 City API is a REST API. All requests are made to endpoints beginning:  
-`https://city-api-production.up.railway.app/api/v1/`
+`https://city-api-80b3.onrender.com/api/v1/`
 
 All requests must be secure, i.e. `https`, not `http`.
 
@@ -27,7 +27,7 @@ In order to some transaction (create, delete, update) you will need an access to
 For the protected routes, firstly you should sign up.
 
 ```
-POST https://city-api-production.up.railway.app/api/v1/users/signup
+POST https://city-api-80b3.onrender.com/api/v1/users/signup
 ```
 The first step, you should send json body. Example body:
 
@@ -90,7 +90,7 @@ Possible errors:
 ### 2.2. Login 
 
 ```
-POST https://city-api-production.up.railway.app/api/v1/users/login
+POST https://city-api-80b3.onrender.com/api/v1/users/login
 ```
 The first step, you should send json body. Example body:
 
@@ -144,7 +144,7 @@ The API is RESTful and arranged around resources.  All requests must be made usi
 Returns details of the user who has granted permission to the application.
 
 ```
-GET https://city-api-production.up.railway.app/api/v1/users/me
+GET https://city-api-80b3.onrender.com/api/v1/users/me
 ```
 
 Example request header:
@@ -182,7 +182,7 @@ Possible errors:
 Returns a full list of cities. An example request looks like this:
 
 ```
-GET https://city-api-production.up.railway.app/api/v1/cities
+GET https://city-api-80b3.onrender.com/api/v1/cities
 ```
 
 This endpoint will return all cities in Turkey. The response array is wrapped in a data envelope. Example response:
@@ -218,7 +218,7 @@ Where a City object is:
 This endpoint returns a specific city. An example request looks like this:
 
 ```
-GET https://city-api-production.up.railway.app/api/v1/cities/{{cityID}}
+GET https://city-api-80b3.onrender.com/api/v1/cities/{{cityID}}
 ```
 An example response looks like this:
 
@@ -248,7 +248,7 @@ Possible errors:
 Returns a full list of tours. An example request looks like this:
 
 ```
-GET https://city-api-production.up.railway.app/api/v1/tours
+GET https://city-api-80b3.onrender.com/api/v1/tours
 ```
 
 This endpoint will return all tours in Turkey. The response array is wrapped in a data envelope. Example response:
@@ -267,7 +267,7 @@ This endpoint will return all tours in Turkey. The response array is wrapped in 
                 "cityName": "mersin",
                 "address": "Atakent, Mersin - Antalya Yolu, 33740 Silifke/Mersin",
                 "details_url": "https://www.kulturportali.gov.tr/turkiye/mersin/",
-                "images": ["https://city-api-production.up.railway.app/img/mersin/31.jpeg"],
+                "images": ["https://city-api-80b3.onrender.com/img/mersin/31.jpeg"],
                 "locDescription": "Deniz Kalesi olarak da bilinen Kızkalesi ...",
                 "city": "5c88fa8cf4afda39709c0133",
                 "user": "644d1a8a2093cca5689894b0"
@@ -299,7 +299,7 @@ Where a Tour object is:
 This endpoint returns a specific tour. An example request looks like this:
 
 ```
-GET https://city-api-production.up.railway.app/api/v1/tours/{{tourID}}
+GET https://city-api-80b3.onrender.com/api/v1/tours/{{tourID}}
 ```
 An example response looks like this:
 
@@ -316,7 +316,7 @@ An example response looks like this:
                 "cityName": "mersin",
                 "address": "Atakent, Mersin - Antalya Yolu, 33740 Silifke/Mersin",
                 "details_url": "https://www.kulturportali.gov.tr/turkiye/mersin/",
-                "images": ["https://city-api-production.up.railway.app/img/mersin/31.jpeg"],
+                "images": ["https://city-api-80b3.onrender.com/img/mersin/31.jpeg"],
                 "locDescription": "Deniz Kalesi olarak da bilinen Kızkalesi ...",
                 "city": "5c88fa8cf4afda39709c0133",
                 "user": "644d1a8a2093cca5689894b0"
@@ -336,7 +336,7 @@ Possible errors:
 You should grant permission to the application for create a new tour.
 
 ```
-POST https://city-api-production.up.railway.app/api/v1/tours
+POST https://city-api-80b3.onrender.com/api/v1/tours
 ```
 
 Example request header:
@@ -380,7 +380,7 @@ Possible errors:
 You should grant permission to the application for update a tour.
 
 ```
-PATCH https://city-api-production.up.railway.app/api/v1/tours/{{tourID}}
+PATCH https://city-api-80b3.onrender.com/api/v1/tours/{{tourID}}
 ```
 
 Example request header:
@@ -408,7 +408,7 @@ Possible errors:
 You should grant permission to the application for delete a tour.
 
 ```
-DELETE https://city-api-production.up.railway.app/api/v1/tours/{{tourID}}
+DELETE https://city-api-80b3.onrender.com/api/v1/tours/{{tourID}}
 ```
 
 Example request header:
