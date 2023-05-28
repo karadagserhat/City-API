@@ -14,7 +14,7 @@ These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netli
 
 ## 1. Overview
 
-City’s API is a REST API. All requests are made to endpoints beginning:  
+City API is a REST API. All requests are made to endpoints beginning:  
 `https://city-api-production.up.railway.app/api/v1/`
 
 All requests must be secure, i.e. `https`, not `http`.
