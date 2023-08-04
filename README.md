@@ -1,7 +1,7 @@
 
 # City API Documentation
 
-These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netlify.app/) 
+These documents are used for the  [seyahat-rotası](https://seyahat-rotasi.netlify.app/) (Application **suspended**)
 
 #### Contents
 
